@@ -18,6 +18,7 @@ function renderTasks() {
   // filtrar según selección
   let filteredTasks = tasks.filter(task => {
     if (currentFilter === "pending") return !task.completed;
+    if (currentFilter === "completed") return task.completed;
     return true;
   });
 
